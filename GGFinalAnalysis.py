@@ -1,5 +1,6 @@
 import yfinance as yf
 import pandas as pd
+import numpy as np
 
 import streamlit as st   # add at top with other imports, the rest at the bottom
 
@@ -48,4 +49,8 @@ sortino_ratio = calculate_sortino_ratio(returns_data)
 st.subheader("Performance Metrics")
 st.write(f"Sharpe Ratio: {sharpe_ratio:.2f}")
 st.write(f"Sortino Ratio: {sortino_ratio:.2f}")
+
+
+def portfolio_optimization(returns):
+    return np.ones(len(returns.columns)) / len(returns.columns)
 
