@@ -33,9 +33,10 @@ data_load_state.text("Done! (using st.cache_data)")
 # st.subheader('Raw data')
 if st.checkbox('Show raw data'):
     st.subheader('Raw data')
+    st.write(data)
 else:
-    st.subheader("Partial Data")
-st.write(data)
+    st.subheader("No raw Data")
+
 
 if st.checkbox('Show bar chart'):
     st.subheader('Number of pickups by hour')
