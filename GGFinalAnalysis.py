@@ -1,4 +1,4 @@
-mport yfinance as yf
+import yfinance as yf
 import pandas as pd
 
 def fetch_data(tickers, start_date, end_date):
