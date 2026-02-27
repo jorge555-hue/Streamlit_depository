@@ -1,3 +1,4 @@
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -53,4 +54,11 @@ st.write(f"Sortino Ratio: {sortino_ratio:.2f}")
 
 def portfolio_optimization(returns):
     return np.ones(len(returns.columns)) / len(returns.columns)
+
+optimal_weights = portfolio_optimization(returns_data)
+
+st.subheader("Portfolio Optimization")
+st.write("Optimal Portfolio Weights:")
+for ticker, weight in zip(tickers, optimal_weights):
+    st.write(f"{ticker}: {weight:.2%}")
 
